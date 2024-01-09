@@ -39,6 +39,39 @@ const LandingPage = () => {
             </nav>
           </div>
         </div>
+        <section className="xmain-wrapper">
+          <div className="xmain-wrapper__top">
+            <div className="container">
+              <div className="mwt-content">
+                <div className="mwt-icon">
+                  <img src="/assets/luffy.png" alt="" />
+                </div>
+                <div className="logo">
+                  <img src="/assets/logo.png" alt="" />
+                </div>
+                <div className="xseach">
+                  <div class="search-content">
+                    <form action="/search" autocomplete="off" id="search-form">
+                      <div class="search-submit">
+                        <div class="search-icon btn-search">
+                          <i class="fa fa-search"></i>
+                        </div>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control search-input"
+                        name="keyword"
+                        placeholder="Search anime..."
+                        required=""
+                      />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="xmain-wrapper__body"></div>
+        </section>
       </div>
     </>
   );

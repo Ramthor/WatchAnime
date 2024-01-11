@@ -45,18 +45,66 @@
 
 .mwt-content {
   display: block;
-  margin-top: 100px;
 }
 .logo img {
-  height: 200px;
+  padding-left: 290px;
+  height: 300px;
 }
+
 .mwt-icon {
   position: absolute;
   display: flex;
-
-  bottom: 0;
-  right: 600px;
+  right: 0;
+  left: 350px;
+  z-index: -1;
 }
 .mwt-icon img {
-  height: 300px;
+  width: 100%;
+  height: 600px;
+}
+.xseach {
+  position: absolute;
+  display: flex;
+  padding-left: 280px;
+  width: 100%;
+  top: 250px;
+}
+.search-content {
+  padding: 5px 90px;
+}
+#search-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 570px;
+}
+
+.search-input {
+  height: 50px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  border: none !important;
+}
+.search-input::placeholder {
+  color: #495057;
+  font-family: var(--poppins);
+}
+
+.search-submit {
+  display: block;
+  padding-bottom: 100px;
+}
+
+.serch-btn-icon {
+  display: flex;
+
+  padding: 15px;
+  border-radius: 100%;
+  background-color: rgb(230, 45, 45);
 }

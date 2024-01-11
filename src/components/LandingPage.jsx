@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 const LandingPage = () => {
   const [isActive, setIsActive] = useState(false);
@@ -44,7 +45,9 @@ const LandingPage = () => {
             <div className="container">
               <div className="mwt-content">
                 <div className="mwt-icon">
-                  <img src="/assets/luffy.png" alt="" />
+                  <div>
+                    <img src="/assets/bg5.jpg" alt="" />
+                  </div>
                 </div>
                 <div className="logo">
                   <img src="/assets/logo.png" alt="" />
@@ -52,11 +55,6 @@ const LandingPage = () => {
                 <div className="xseach">
                   <div class="search-content">
                     <form action="/search" autocomplete="off" id="search-form">
-                      <div class="search-submit">
-                        <div class="search-icon btn-search">
-                          <i class="fa fa-search"></i>
-                        </div>
-                      </div>
                       <input
                         type="text"
                         class="form-control search-input"
@@ -64,6 +62,13 @@ const LandingPage = () => {
                         placeholder="Search anime..."
                         required=""
                       />
+                      <div class="search-submit">
+                        <div class="search-icon btn-search">
+                          <i class="serch-btn-icon">
+                            <SearchIcon />
+                          </i>
+                        </div>
+                      </div>
                     </form>
                   </div>
                 </div>

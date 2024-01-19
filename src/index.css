@@ -95,7 +95,6 @@ body {
 
   .header__menu-list {
     width: auto;
-
     text-align: center;
   }
   .nav-item {
@@ -108,16 +107,39 @@ body {
   .a:hover {
     color: #ffdd95;
   }
+
+  .mwt-content {
+    position: absolute;
+    top: 0px;
+    padding-left: 10px;
+  }
+  .xseach {
+    position: absolute;
+    display: flex;
+    padding-left: 50px;
+    width: 100%;
+    top: 200px;
+  }
+  #search-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 600px;
+  }
 }
 @media only screen and (max-width: 1199px) and (min-width: 781px) {
   .xheader {
-    padding-top: 40px;
-    padding-left: 40px;
-    background-color: #343a40;
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+  .xheader__nav {
+    padding-left: 35px;
   }
 
   .nav-item {
     padding-right: 44px;
-    background-color: #dc3545;
+  }
+  .mwt-content {
+    padding-left: 30px;
   }
 }

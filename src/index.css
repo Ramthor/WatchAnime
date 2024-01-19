@@ -14,7 +14,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background: url(../public/assets/bg5.jpg) no-repeat;
+  overflow: hidden;
 }
 
 :root {
@@ -56,7 +57,8 @@ body {
 
 @media only screen and (max-width: 780px) {
   .xheader {
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-left: 0;
   }
 
   .nav-menu {
@@ -66,13 +68,15 @@ body {
   .nav-menu__btn {
     display: flex;
     background: transparent;
+    text-decoration: none;
     outline: none;
     border: none;
     color: white;
     align-items: center;
     font-family: var(--poppins);
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
+    z-index: 2;
   }
 
   .nav-menu__btn.active {
@@ -81,30 +85,24 @@ body {
   .xheader__nav.active {
     display: none;
   }
+
   .xheader__nav {
     position: absolute;
-    left: 15px;
-    width: auto;
-    top: 45px;
-    right: 15px;
-    background: rgba(92, 93, 99, 0.98);
+    display: flex;
+    top: 14px;
     border-radius: 25px;
-    height: auto;
-    padding: 0;
-    z-index: 99;
   }
 
   .header__menu-list {
-    width: 100%;
-    display: block;
-    padding: 15px;
+    width: auto;
+
     text-align: center;
   }
   .nav-item {
-    padding-right: 0;
+    padding-right: 20px;
   }
   .nav-item .a {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 55px;
   }
   .a:hover {
@@ -113,12 +111,13 @@ body {
 }
 @media only screen and (max-width: 1199px) and (min-width: 781px) {
   .xheader {
-    margin-top: 10px;
-  }
-  .container {
+    padding-top: 40px;
     padding-left: 40px;
+    background-color: #343a40;
   }
+
   .nav-item {
     padding-right: 44px;
+    background-color: #dc3545;
   }
 }

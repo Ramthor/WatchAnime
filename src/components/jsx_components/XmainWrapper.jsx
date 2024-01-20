@@ -8,6 +8,9 @@ const XmainWrapper = () => {
         <div className="xmain-wrapper__top">
           <div className="mwt-content">
             <div className="mwt-content__div">
+              <div className="background">
+                <img src="assets/onepice.png" alt="" />
+              </div>
               <div className="logo">
                 <img src="/assets/logo-1.png" alt="" />
               </div>
@@ -23,7 +26,7 @@ const XmainWrapper = () => {
                     />
                     <div class="search-submit">
                       <div class="search-icon btn-search">
-                        <i class="serch-btn-icon">
+                        <i class="search-btn-icon">
                           <SearchIcon />
                         </i>
                       </div>

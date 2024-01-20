@@ -14,7 +14,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../public/assets/bg5.jpg) no-repeat;
+  /* background: url(../public/assets/bg5.jpg) no-repeat; */
+  background: rgb(36, 36, 40);
   overflow: hidden;
 }
 

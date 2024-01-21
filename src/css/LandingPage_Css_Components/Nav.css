@@ -21,6 +21,7 @@
   list-style: none;
 }
 .nav-item {
+  z-index: 9;
   padding-right: 44px;
 }
 .nav-item .a {

@@ -8,7 +8,7 @@ const XmainWrapper = () => {
         <div className="xmain-wrapper__top">
           <div className="mwt-content">
             <div className="mwt-content__div">
-              <div className="background">
+              <div className="cover-img">
                 <img src="assets/onepice.png" alt="" />
               </div>
               <div className="logo">

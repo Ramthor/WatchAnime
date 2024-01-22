@@ -1,7 +1,7 @@
 .xheader {
   display: flex;
   padding-top: 50px;
-  padding-left: 266px;
+  justify-content: center;
 }
 .container {
   width: 100%;
@@ -13,8 +13,6 @@
 
 .xheader__nav {
   width: 100%;
-
-  padding-left: 102px;
 }
 .header__menu-list {
   display: flex;
@@ -26,16 +24,13 @@
 }
 .nav-item .a {
   line-height: 60px;
-  height: 60px;
+
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-family: var(--poppins);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
-
-  margin-right: 0;
-  padding: 0;
 }
 .a:hover {
   color: #ffdd95;

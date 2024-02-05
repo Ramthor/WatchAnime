@@ -1,5 +1,5 @@
 @import url(./App.css);
-@import url(./css/LandingPage.css);
+@import url(./css/LandingPage_Css_Components/LandingPage.css);
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
@@ -17,10 +17,11 @@ body {
   background: rgb(36, 36, 40);
 
   overflow-x: hidden;
-  font-family: "Poppins", Arial;
+
   font-size: 14px;
   line-height: 1.4em;
-  font-weight: 400;
+  font-weight: 500;
+  text-align: left;
 }
 
 :root {
@@ -51,27 +52,34 @@ body {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  /* --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace; */
 
   --poppins: "poppins", sans-serif;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 375px) {
   .xheader {
-    padding-top: 30px;
-    padding-left: 0;
-    display: flex;
+    margin-top: 10px;
   }
+  .lp-container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0;
+  }
+  .header__menu-list.active {
+    width: 100%;
+    display: block !important;
+    list-style: none;
+    padding: 0;
 
+    border-radius: 30px;
+  }
   .nav-menu {
-    display: flex;
-    padding-left: 20px;
+    display: inline-block;
+    top: 20px;
+    height: 60px;
+    position: relative;
+    margin: 0 20px 0;
   }
-
   .nav-menu__btn {
     display: flex;
     background: transparent;
@@ -81,88 +89,126 @@ body {
     color: white;
     align-items: center;
     font-family: var(--poppins);
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     z-index: 2;
   }
+  .xheader__nav {
+    position: absolute;
+    width: 100%;
 
-  .nav-menu__btn.active {
-    color: #ffdd95;
+    padding: 0 27px 0 0px;
   }
   .xheader__nav.active {
     display: none;
   }
-
-  .xheader__nav {
-    position: absolute;
-    width: 470px;
-    top: 60px;
-    border-radius: 0px;
-    left: 0px;
-
-    background-color: rgba(92, 93, 99, 0.98);
-    padding: 10px;
-    padding-right: 30px;
-    z-index: 10;
+  .nav-menu__btn.active {
+    color: #ffdd95;
   }
 
   .header__menu-list {
-    /* z-index: ; */
-    display: flex;
-    flex-direction: column;
+    top: 60px;
+    background-color: #6c757d;
+    border-radius: 25px;
+    height: auto;
+    padding: 10px 0;
+    z-index: 99;
+  }
 
-    width: auto;
+  .nav-item .a {
+    padding-left: 30px;
     text-align: center;
   }
-  .nav-item {
-    padding-right: 6px;
-    padding-left: 6px;
+}
+
+@media only screen and (max-width: 425px) and (min-width: 376px) {
+  .xheader {
+    margin-top: 10px;
   }
-  .nav-item .a {
-    font-size: 12px;
-    line-height: 55px;
+  .lp-container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0;
   }
-  .a:hover {
-    color: #ffdd95;
+  .header__menu-list.active {
+    width: 100%;
+    display: block !important;
+    list-style: none;
+    padding: 0;
+
+    border-radius: 30px;
   }
-  /* xmainWrapper */
-  .cover-img,
-  .cover-img img {
+  .nav-menu {
+    display: inline-block;
+    top: 20px;
+    height: 60px;
+    position: relative;
+    margin: 0 20px 0;
+  }
+  .nav-menu__btn {
+    display: flex;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: white;
+    align-items: center;
+    font-family: var(--poppins);
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .xheader__nav {
+    position: absolute;
+    width: 100%;
+
+    padding: 0 22px 0 0px;
+  }
+  .xheader__nav.active {
     display: none;
   }
-  .logo {
-    position: absolute;
-    padding-top: 0px;
-    top: 0;
-    padding-left: 10px;
-  }
-  .mwt-content {
-    padding-left: 10px;
+  .nav-menu__btn.active {
+    color: #ffdd95;
   }
 
-  .xseach {
-    position: absolute;
-    display: flex;
-
-    padding-left: 0px;
-
-    width: 350px;
-    top: 210px;
+  .header__menu-list {
+    top: 60px;
+    background-color: #6c757d;
+    border-radius: 25px;
+    height: auto;
+    padding: 10px 0;
+    z-index: 99;
   }
-  .search-icon {
-    padding-right: 10px;
+
+  .nav-item .a {
+    padding-left: 40px;
+    text-align: center;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 426px) {
   .xheader {
-    padding-top: 30px;
-    padding-left: 20px;
+    margin-top: 10px;
   }
-
-  .nav-menu {
-    display: flex;
+  .lp-container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0;
+  }
+  .header__menu-list.active {
+    width: 100%;
+    display: block !important;
+    list-style: none;
     padding: 0;
+
+    border-radius: 30px;
+  }
+  .nav-menu {
+    display: inline-block;
+    top: 20px;
+    height: 60px;
+    position: relative;
+    margin: 0 20px 0;
   }
   .nav-menu__btn {
     display: flex;
@@ -177,149 +223,71 @@ body {
     cursor: pointer;
     z-index: 2;
   }
+  .xheader__nav {
+    position: absolute;
+    width: 100%;
 
-  .nav-menu__btn.active {
-    color: #ffdd95;
+    padding: 0 40px 0 0px;
   }
   .xheader__nav.active {
     display: none;
   }
-
-  .xheader__nav {
-    position: absolute;
-    display: flex;
-    width: 500px;
-    top: 15px;
-    left: 100px;
-    border-radius: 25px;
-    background-color: #ffffff27;
-    padding: 0 0 0 20px;
+  .nav-menu__btn.active {
+    color: #ffdd95;
   }
 
   .header__menu-list {
-    width: auto;
+    top: 60px;
+    background-color: #6c757d;
+    border-radius: 25px;
+    height: auto;
+    padding: 10px 0;
+    z-index: 99;
+  }
+
+  .nav-item .a {
     text-align: center;
   }
-  .nav-item {
-    padding-right: 25px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .xheader {
+    margin-top: 10px;
+  }
+  .lp-container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 30px;
   }
   .nav-item .a {
     font-size: 14px;
-    line-height: 55px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 0;
   }
-
   .a:hover {
     color: #ffdd95;
   }
-  /* xmainWrapper */
-
-  .cover-img,
-  .cover-img img {
-    display: none;
-  }
-
-  .logo {
-    position: absolute;
-    padding-top: 0px;
-    top: 0;
-    padding-left: 10px;
-  }
-
-  .xseach {
-    position: absolute;
-    display: flex;
-    padding-left: 70px;
-
-    width: 100%;
-    top: 190px;
-  }
-  .search-icon {
-    padding-right: 40px;
-  }
 }
-@media only screen and (max-width: 1024px) and (min-width: 769px) {
-  .xheader {
-    padding-top: 17px;
-    padding-left: 17px;
-  }
-  .xheader__nav {
-    padding-left: 35px;
-  }
-
-  .nav-item {
-    padding-right: 44px;
-  }
-  .nav-item .a {
-    font-size: 13px;
-  }
-  .cover-img {
-    position: absolute;
-    top: 50px;
-
-    padding-left: 670px;
-    padding-right: 10px;
-  }
-  .cover-img img {
-    max-height: 400px;
-  }
-
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-  }
-  .search-icon {
-    padding-right: 200px;
-  }
-  .xseach {
-    position: absolute;
-    display: flex;
-    padding-left: 100px;
-
-    max-width: 100%;
-    top: 230px;
-  }
-}
-
-@media only screen and (max-width: 1440px) and (min-width: 1025px) {
-  .xheader {
-    padding-top: 50px;
-  }
-  .xheader__nav {
-    padding-left: 120px;
-  }
-  .container {
+@media only screen and (max-width: 1440px) and (min-width: 1200px) {
+  .lp-container {
     width: 100%;
-  }
-  .xmain-wrapper {
-    padding-left: 100px;
-    justify-content: center;
+    padding: 0 15px;
+    margin: 0 96px;
     background-color: #007bff;
   }
-
-  .nav-item {
-    padding-right: 44px;
+  .nav-item .a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: var(--poppins);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
-
-  .cover-img {
-    position: absolute;
-    top: 80px;
-
-    padding-left: 760px;
-    padding-right: 10px;
-  }
-  .logo {
-    position: absolute;
-    padding-left: 0px;
-  }
-  .search-icon {
-    padding-right: 100px;
-  }
-  .xseach {
-    position: absolute;
-    padding-left: 0px;
-    padding-left: 60px;
-    width: 690px;
-    top: 330px;
+  .a:hover {
+    color: #ffdd95;
   }
 }

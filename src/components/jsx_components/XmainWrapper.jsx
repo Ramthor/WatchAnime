@@ -5,7 +5,7 @@ const XmainWrapper = () => {
   return (
     <>
       <section className="xmain-wrapper ">
-        <div className=" container">
+        <div className="lp-container">
           <div className="xmain-wrapper__top ">
             <div className="mwt-content">
               <div className="mwt-content__div">

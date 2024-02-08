@@ -17,7 +17,7 @@ body {
   background: rgb(36, 36, 40);
 
   overflow-x: hidden;
-
+  font-family: var(--poppins);
   font-size: 14px;
   line-height: 1.4em;
   font-weight: 500;
@@ -257,7 +257,7 @@ body {
   .lp-container {
     width: 100%;
     padding: 0 15px;
-    margin: 0 30px;
+    margin: 0 auto;
   }
   .nav-item .a {
     font-size: 14px;
@@ -274,7 +274,6 @@ body {
     width: 100%;
     padding: 0 15px;
     margin: 0 96px;
-    background-color: #007bff;
   }
   .nav-item .a {
     display: block;
@@ -289,5 +288,10 @@ body {
   }
   .a:hover {
     color: #ffdd95;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #mw-top .mwt-content .mwt-icon {
+    width: 40%;
   }
 }

@@ -1,63 +1,107 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 const XmainWrapper = () => {
   return (
     <>
-      <section className="xmain-wrapper ">
-        <div className="lp-container">
-          <div className="xmain-wrapper__top ">
+      <div className="xmain-wrapper">
+        <div id="mw-top">
+          <div className="mwt-container">
             <div className="mwt-content">
-              <div className="mwt-content__div">
-                <div className="logo">
-                  <img src="/assets/logo-1.png" alt="" />
-                </div>
-                <div className="cover-img">
-                  <img src="assets/onepice.png" alt="" />
-                </div>
-
-                <div className="xseach">
-                  <div class="search-content">
-                    <form action="/search" autocomplete="off" id="search-form">
-                      <input
-                        type="text"
-                        class="form-control search-input"
-                        name="keyword"
-                        placeholder="Search anime..."
-                        required=""
-                      />
-                      <div class="search-submit">
-                        <div class="search-icon btn-search">
-                          <i class="search-btn-icon">
-                            <SearchIcon />
-                          </i>
+              <div className="mwt-icon">
+                <img src="./assets/onepice1.png" alt="aniwatch" />
+              </div>
+              <div className="mwh-logo">
+                <Link to="/home" className="mwh-logo-div">
+                  <img src="/assets/logo.png" alt="AniWatch" />
+                </Link>
+                <div className="clearfix"></div>
+              </div>
+              <div id="xsearch" className="home-search">
+                <div className="search-content">
+                  <form action="/search" autoComplete="off" id="search-form">
+                    <div className="search-submit">
+                      <div className="search-icon btn-search">
+                        <div className="fa fa-search">
+                          <SearchIcon />
                         </div>
                       </div>
-                      <div className="xhashtags">
-                        <p>
-                          Top search:{" "}
-                          <span>
-                            One Piece,Solo Leveling,Jujutsu Kaisen 2nd Season,{" "}
-                            <br />
-                            Mashle: Magic and MusclesMashle,: Magic and Muscles,
-                            Season 2Overflow (Uncensored),
-                            <br />
-                            Classroom of the Elite III,Jujutsu Kaisen
-                            (TV),Naruto: Shippuden,
-                            <br />
-                            The Apothecary Diaries
-                          </span>
-                        </p>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                    <input
+                      type="text"
+                      className="form-control search-input"
+                      name="keyword"
+                      placeholder="Search anime..."
+                      required=""
+                    />
+                  </form>
+                </div>
+                <div className="xhashtag">
+                  <span className="title">Top search:</span>
+
+                  <CustomSearch to="/search" className="item">
+                    One Piece
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Solo Leveling
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Jujutsu Kaisen 2nd Season
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Classroom of the Elite III
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Mashle: Magic and Muscles
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Naruto: Shippuden
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Overflow (Uncensored)
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Black Clover
+                  </CustomSearch>
+                  <CustomSearch to="/search" className="item">
+                    Attack on Titan
+                  </CustomSearch>
+
+                  <CustomSearch to="/search" className="item">
+                    Mashle: Magic and Muscles Season 2
+                  </CustomSearch>
                 </div>
               </div>
             </div>
           </div>
-          <div className="xmain-wrapper__body"></div>
         </div>
-      </section>
+      </div>
+    </>
+  );
+};
+const CustomSearch = ({ to, children, ...props }) => {
+  const resolvedPath = useResolvedPath(to);
+  const isActivePath = useMatch({ path: resolvedPath.pathname, end: true });
+
+  const linkStyle = {
+    textDecoration: "none",
+    outline: "none",
+    color: "#aaa",
+    fontFamily: "var(--poppins)",
+    fontWeight: "300",
+  };
+  return (
+    <>
+      <Link style={linkStyle} to={to} {...props}>
+        {children}
+      </Link>
     </>
   );
 };

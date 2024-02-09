@@ -6,7 +6,7 @@ const XmainWrapper = () => {
     <>
       <div className="xmain-wrapper">
         <div id="mw-top">
-          <div className="mwt-container">
+          <div className="container">
             <div className="mwt-content">
               <div className="mwt-icon">
                 <img src="./assets/onepice1.png" alt="aniwatch" />
@@ -37,46 +37,47 @@ const XmainWrapper = () => {
                   </form>
                 </div>
                 <div className="xhashtag">
-                  <span className="title">Top search:</span>
+                  <div className="items">
+                    <span className="title">Top search:</span>
+                    <CustomSearch to="/search" className="item">
+                      One Piece
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    One Piece
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Solo Leveling
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Solo Leveling
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Jujutsu Kaisen 2nd Season
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Jujutsu Kaisen 2nd Season
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Classroom of the Elite III
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Classroom of the Elite III
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Mashle: Magic and Muscles
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Mashle: Magic and Muscles
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Naruto: Shippuden
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Naruto: Shippuden
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Overflow (Uncensored)
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Overflow (Uncensored)
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Black Clover
+                    </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Attack on Titan
+                    </CustomSearch>
 
-                  <CustomSearch to="/search" className="item">
-                    Black Clover
-                  </CustomSearch>
-                  <CustomSearch to="/search" className="item">
-                    Attack on Titan
-                  </CustomSearch>
-
-                  <CustomSearch to="/search" className="item">
-                    Mashle: Magic and Muscles Season 2
-                  </CustomSearch>
+                    <CustomSearch to="/search" className="item">
+                      Mashle: Magic and Muscles Season 2
+                    </CustomSearch>
+                  </div>
                 </div>
               </div>
             </div>
@@ -95,12 +96,14 @@ const CustomSearch = ({ to, children, ...props }) => {
     outline: "none",
     color: "#aaa",
     fontFamily: "var(--poppins)",
-    fontWeight: "300",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "24px",
   };
   return (
     <>
       <Link style={linkStyle} to={to} {...props}>
-        {children}
+        {children},
       </Link>
     </>
   );

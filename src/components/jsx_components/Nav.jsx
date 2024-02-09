@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <>
       <div className="xheader">
-        <div className="lp-container">
+        <div className="container">
           <div className="nav-menu">
             <button
               className={isActive ? "nav-menu__btn active" : "nav-menu__btn hi"}

@@ -6,6 +6,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        hiiiii
       </Routes>
     </>
   );
